@@ -78,12 +78,10 @@ glass, hair — that meshes choke on**, and it renders in **real time, in a brow
 | **`api/`** | FastAPI backend — presigned upload, submit job, poll status, seat presets |
 | **`web/`** | browser splat viewer + seat‑POV picker (see [`../portal-fe`](../portal-fe)) |
 | **`scripts/`** | `export_ply.py`, `ply2ksplat.mjs`, `keyframe_select.py` |
-| **`docs/`** | [research.md](docs/research.md) (design space + experiments), [setup.md](docs/setup.md) (GPU runbook), [plan.md](docs/plan.md) |
 | **`assets/`** | local input videos + output splats (git‑ignored) |
 
 ## Quickstart
 
-**Run the pipeline (needs the GPU toolchain — see [docs/setup.md](docs/setup.md), or use the worker image):**
 ```bash
 pip install -e .
 python -m portal --video venue.mp4 --out out/venue          # → out/venue/ply/splat.{ply,ksplat}
@@ -100,8 +98,7 @@ cd api && pip install -r requirements.txt && uvicorn main:app --reload
 ## Results
 
 On a well‑captured 4K clip, Portal's output **beats KIRI Engine** (the leading commercial scanner)
-on the same footage — sharper text, truer colour, cleaner geometry. The wins come from three
-deliberate choices, documented in [docs/research.md](docs/research.md):
+on the same footage — sharper text, truer colour, cleaner geometry. 
 
 1. **Dense uniform frames** (not motion‑gated) → no SfM fragmentation.
 2. **Learned matching + global SfM** (ALIKED+LightGlue → GLOMAP) → loop‑robust poses.
@@ -129,8 +126,7 @@ the basis of the `eval/` harness (held‑out PSNR/SSIM/LPIPS).
   Mip‑Splatting, Scaffold‑GS, 2DGS**. That's what turns "beats KIRI" into a defensible, quotable
   result. (And gives us a name for the method — *not* "anysplat" 😄, that one's taken.)
 - [ ] **Capture‑robustness study** — span the hard axes (featureless walls, glass/reflective,
-  low‑parallax, linear street‑view, seat‑POV venue), one scene per axis, each with a baseline. See
-  [docs/research.md](docs/research.md) and the [eval/](eval/) harness.
+  low‑parallax, linear street‑view, seat‑POV venue), one scene per axis, each with a baseline.
 - [ ] **2DGS / depth prior** for flat surfaces (floors, walls, ceilings) → less smear.
 - [ ] **Seat‑POV coordinate calibration** (AprilTag) + per‑venue seat → camera presets.
 - [ ] **Technical report → arXiv** (then CVPR/3DV if it holds up).
