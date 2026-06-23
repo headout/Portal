@@ -1,0 +1,5 @@
+# Install the Portal pipeline package + its light deps:
+#     pip install -e .
+# The GPU toolchain (gsplat, hloc, pycolmap, GLOMAP) is installed via the worker image
+# (worker/Dockerfile) — it is not cross-platform pip-installable.
+-e .

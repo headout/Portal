@@ -1,0 +1,9 @@
+{
+  "name": "portal-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Node utilities for Portal (e.g. .ply -> .ksplat compression).",
+  "dependencies": {
+    "@mkkellogg/gaussian-splats-3d": "^0.4.7"
+  }
+}

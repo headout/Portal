@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portal"
+version = "0.2.0"
+description = "Video → web-ready 3D Gaussian Splat: frames → SfM (hloc+GLOMAP) → gsplat MCMC → .ply/.ksplat"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Team Holens" }]
+keywords = ["gaussian-splatting", "structure-from-motion", "novel-view-synthesis"]
+
+# Light deps for the package itself. The GPU toolchain (gsplat, hloc, pycolmap, GLOMAP)
+# is provided by the worker image — not pip-installable cross-platform.
+dependencies = [
+    "numpy",
+    "plyfile",
+]
+
+[project.scripts]
+portal = "portal.__main__:main"
+
+[tool.setuptools]
+packages = ["portal"]

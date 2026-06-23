@@ -1,0 +1,16 @@
+# Convenience conda env for local (CPU) SfM experiments and the pipeline package.
+# The GPU trainer (gsplat) + learned matching (hloc) are installed separately (see worker/Dockerfile).
+#   conda env create -f environment.yml && conda activate portal
+name: portal
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - colmap
+  - ceres-solver
+  - ffmpeg
+  - numpy
+  - pip
+  - pip:
+      - plyfile
+      - -e .

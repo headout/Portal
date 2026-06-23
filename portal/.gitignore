@@ -1,0 +1,24 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+out/
+*.egg-info/
+
+# splats + media (regenerable / large)
+*.ply
+*.ksplat
+*.spz
+*.sog
+*.splat
+*.mov
+*.mp4
+*.MOV
+
+# local input videos + output splats
+assets/
+
+node_modules/
+.next/
+.DS_Store

@@ -1,0 +1,10 @@
+{
+  "input": {
+    "scene_id": "test-room",
+    "video_url": "https://REPLACE-with-a-presigned-GET-url-to-a-short-test-video.mp4",
+    "training_num_steps": 7000,
+    "max_gaussians": 500000,
+    "target_framecount": 120,
+    "make_sog": false
+  }
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use Portal, please cite it as below."
+title: "Portal: Web-Ready 3D Gaussian Splats from a Single Phone Video"
+abstract: >-
+  Portal reconstructs a photoreal, browser-streamable 3D Gaussian Splat from a single
+  casual phone video (up to 4K) — no rig, no LiDAR — via learned matching, global
+  Structure-from-Motion, MCMC splat training with exportable exposure correction, and
+  compressed web delivery. Built for see-the-view-before-you-book experiences.
+authors:
+  - family-names: Malik
+    given-names: Ankush
+  - name: "Akshat"
+  - name: "Sukruth S"
+keywords:
+  - 3D Gaussian Splatting
+  - novel view synthesis
+  - structure-from-motion
+  - neural rendering
+  - immersive commerce
+version: 0.2.0
+date-released: 2026-06-22
+license: MIT

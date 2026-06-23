@@ -1,0 +1,59 @@
+# ── Large local data: upstream clone, experiment outputs, working dirs ──
+# KIRI / experiment splats + zips + cameras.json (hundreds of MB)
+output/
+# extracted frame dumps / casual captures
+images/
+# pod working dir: frames / COLMAP / training inputs
+scene/
+# training outputs
+out/
+
+# ── Media / captures ──
+*.mov
+*.mp4
+*.avi
+*.mkv
+
+# ── Splat / 3D / point-cloud outputs ──
+*.ply
+*.spz
+*.sog
+*.splat
+*.ksplat
+*.zip
+
+# ── Model weights / checkpoints ──
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+*.onnx
+
+# ── Secrets & local env (keep the .example template) ──
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── Large reference binaries (force-add with `git add -f` if you truly want them tracked) ──
+*.pdf
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ── Node (future tooling) ──
+node_modules/
+
+# ── OS / editor cruft ──
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

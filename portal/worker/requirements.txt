@@ -1,0 +1,4 @@
+# Worker runtime deps layered on top of the GPU toolchain (built in worker/Dockerfile).
+# The heavy ML deps (gsplat, hloc, pycolmap, GLOMAP) are installed in the image build.
+runpod>=1.6.0
+boto3>=1.34.0
