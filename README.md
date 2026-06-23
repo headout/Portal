@@ -17,8 +17,7 @@ renders in any browser — plus a per‑seat point‑of‑view layer ("see the v
 you book").
 
 The reconstruction is our own orchestration of best‑in‑class open tools; the API, serverless
-worker, evaluation harness, web viewer, and seat‑POV layer are ours. See
-[THIRD_PARTY.md](THIRD_PARTY.md) for the libraries we build on.
+worker, evaluation harness, web viewer, and seat‑POV layer are ours. 
 
 ## What is a Gaussian Splat?
 
